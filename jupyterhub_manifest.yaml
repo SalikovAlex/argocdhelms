@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Sasha4ever/argocdhelms.git
     targetRevision: main
-    path: jupyterhub/helm
+    path: jupyterhub/Chart.yaml
     helm:
       valueFiles:
         - values.yaml
