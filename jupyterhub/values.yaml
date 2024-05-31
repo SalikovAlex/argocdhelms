@@ -33,6 +33,10 @@ imagePullSecrets: []
 hub:
   revisionHistoryLimit:
   config:
+    Authenticator:
+      admin_users:
+        - salik
+        - admin
     JupyterHub:
       admin_access: true
       authenticator_class: dummy
