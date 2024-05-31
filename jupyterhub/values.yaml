@@ -396,8 +396,8 @@ singleuser:
       volumeNameTemplate: volume-{username}{servername}
       storageAccessModes: [ReadWriteOnce]
   image:
-    name: quay.io/jupyterhub/k8s-singleuser-sample
-    tag: "3.3.7"
+    name: quay.io/jupyter/pytorch-notebook
+    tag: latest
     pullPolicy:
     pullSecrets: []
   startTimeout: 300
@@ -413,7 +413,18 @@ singleuser:
   cmd: jupyterhub-singleuser
   defaultUrl:
   extraPodConfig: {}
-  profileList: []
+  profileList: 
+    - display_name: "GPU Server"
+      description: "Spawns a notebook server with access to a GPU"
+      kubespawner_override:
+        extra_resource_limits:
+          nvidia.com/gpu: "1"
+    - display_name: "CUSTOM"
+      description: "By selecting this choice, you will be assigned a environment that will run on a dedicated machine with a single GPU, just for you."
+      kubespawner_override:
+        image: cschranz/gpu-jupyter:v1.6_cuda-12.0_ubuntu-22.04
+        extra_resource_limits:
+          nvidia.com/gpu: "1"
 
 # scheduling relates to the user-scheduler pods and user-placeholder pods.
 scheduling:
