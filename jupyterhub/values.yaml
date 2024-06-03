@@ -404,7 +404,7 @@ singleuser:
     tag: latest
     pullPolicy:
     pullSecrets: []
-  startTimeout: 300
+  startTimeout: 1000
   cpu:
     limit:
     guarantee:
