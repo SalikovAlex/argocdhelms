@@ -425,8 +425,8 @@ singleuser:
     - display_name: "CUSTOM"
       description: "By selecting this choice, you will be assigned a environment that will run on a dedicated machine with a single GPU, just for you."
       kubespawner_override:
-        extra_resource_guarantees:
-          nvidia.com/gpu: "1"
+        extra_resource_limits:
+          nvidia.com/gpu: 1
 
 # scheduling relates to the user-scheduler pods and user-placeholder pods.
 scheduling:
