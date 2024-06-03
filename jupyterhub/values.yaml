@@ -401,7 +401,7 @@ singleuser:
       storageAccessModes: [ReadWriteOnce]
   image:
     name: quay.io/jupyterhub/k8s-singleuser-sample
-    tag: latest
+    tag: "3.3.7"
     pullPolicy:
     pullSecrets: []
   startTimeout: 1000
