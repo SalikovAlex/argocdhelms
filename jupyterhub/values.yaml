@@ -404,7 +404,7 @@ singleuser:
     tag: "3.3.7"
     pullPolicy:
     pullSecrets: []
-  startTimeout: 1000
+  start_timeout: 1000
   cpu:
     limit:
     guarantee:
