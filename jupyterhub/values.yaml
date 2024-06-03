@@ -400,7 +400,7 @@ singleuser:
       volumeNameTemplate: volume-{username}{servername}
       storageAccessModes: [ReadWriteOnce]
   image:
-    name: quay.io/jupyter/pytorch-notebook
+    name: quay.io/jupyterhub/k8s-singleuser-sample
     tag: latest
     pullPolicy:
     pullSecrets: []
